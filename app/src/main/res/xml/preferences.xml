@@ -1,0 +1,38 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="@string/options">
+
+        <CheckBoxPreference
+            android:key="notification"
+            android:summary="@string/activer_notification"
+            android:title="@string/notification"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="sound"
+            android:summary="@string/son_info"
+            android:title="@string/son"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="vibreur"
+            android:summary="@string/vibreur_info"
+            android:title="@string/vibreur"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="led"
+            android:summary="@string/led_info"
+            android:title="@string/led"
+            android:defaultValue="true"/>
+
+        <CheckBoxPreference
+            android:key="hide_read_post"
+            android:summary="@string/article_lu_info"
+            android:title="@string/article_lu_title"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,18 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+<android.support.v7.widget.Toolbar
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/tool_bar"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="?attr/colorPrimary"
+android:minHeight="?attr/actionBarSize"
+android:popupTheme="@style/Theme.AppCompat.Light.DarkActionBar"
+android:theme="@style/Toolbar"/>
+
+
+
+
+
+</merge>
+

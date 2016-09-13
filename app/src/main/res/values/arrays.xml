@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="categories_tags">
+        <item>derniere_24h</item>
+        <item>actualites</item>
+        <item>applications</item>
+        <item>astuces</item>
+        <item>jeux</item>
+        <item>tutoriels</item>
+    </string-array>
+
+    <string-array name="categories_names">
+        <item>Dernières 24h</item>
+        <item>Actualités</item>
+        <item>Applications</item>
+        <item>Astuces</item>
+        <item>Jeux</item>
+        <item>Tutoriels</item>
+        <item>Favoris</item>
+        <item>Paramètres</item>
+        <item>Contact</item>
+        <item>Notez l\'application</item>
+        <item>A propos</item>
+    </string-array>
+
+
+
+</resources>

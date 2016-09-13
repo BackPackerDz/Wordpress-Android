@@ -1,0 +1,85 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.jakewharton.hugo'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        applicationId "com.squalala.dz6android"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 3
+        versionName "1.0.2"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+        }
+    }
+
+
+}
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.daimajia.easing:library:1.0.1@aar'
+    compile 'com.daimajia.androidanimations:library:1.1.3@aar'
+    compile 'com.github.ViksaaSkool:AwesomeSplash:v1.0.0'
+    compile 'com.android.support:appcompat-v7:23.1.0'
+    compile 'com.android.support:recyclerview-v7:23.1.0'
+    compile 'com.android.support:cardview-v7:23.1.0'
+    compile 'com.android.support:design:23.1.0'
+    compile 'com.parse.bolts:bolts-android:1.+'
+    compile 'de.greenrobot:greendao:2.0.0'
+    compile 'cn.pedant.sweetalert:library:1.3'
+    compile('com.mikepenz:materialdrawer:4.3.1@aar') {
+        transitive = true
+    }
+
+    compile 'com.mikepenz:material-design-iconic-typeface:+@aar'
+    compile 'com.mikepenz:google-material-typeface:1.2.0.1@aar'
+    compile 'com.mikepenz:fontawesome-typeface:4.4.0.1@aar'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'de.greenrobot:eventbus:2.4.0'
+    compile 'com.android.support:multidex:1.0.1'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
+    compile 'com.victor:lib:1.0.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.squareup.okhttp:okhttp-urlconnection:2.4.0'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.google.dagger:dagger:2.0.1'
+    apt 'com.google.dagger:dagger-compiler:2.0.1'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile 'com.github.chrisbanes.photoview:library:1.2.3'
+    compile 'com.google.android.gms:play-services-analytics:7.5.0'
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.1@aar') {
+        transitive = true;
+    }
+    compile 'org.jsoup:jsoup:1.8.3'
+}

@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">AndroiDZ</string>
+
+    <string name="id_google_analytics">UA-71398009-1</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="action_search">Recherche</string>
+    <string name="action_share">Partager</string>
+
+    <string name="website_name">dz-android.com</string>
+
+    <string name="notification">Notifications</string>
+    <string name="son">Son</string>
+    <string name="Vibreur">Vibreur</string>
+    
+    <string name="appuyer_quitter">Appuyer encore une fois pour quitter</string>
+
+    <string name="son_info">Son pour les notifications</string>
+    <string name="activer_notification">Activer les notifications</string>
+    <string name="options">Options</string>
+
+    <string name="no_results">Aucun résultat</string>
+
+    <string name="article_ajouter">Article ajouté dans les favoris</string>
+    <string name="article_retirer">Article retiré des favoris</string>
+
+    <string name="vibreur">Vibreur</string>
+    <string name="vibreur_info">Vibreur pour les notifications</string>
+
+    <string name="led">Led Flash</string>
+    <string name="led_info">Faire clignoter le led du flash</string>
+
+    <string name="reglage">Réglages</string>
+
+    <string name="no_conneciton">Pas de connexion internet</string>
+
+    <string name="oui">Oui</string>
+    <string name="cool">Cool !</string>
+    <string name="non">Non</string>
+
+    <string name="alert_text_note_app">Aimes-tu AndroiDZ ?</string>
+    <string name="note_dzbac">Veux-tu noter l\'application ?</string>
+
+    <string name="cacher_lu">Cacher les lus</string>
+    <string name="tout_marquer_lus">Tout marquer comme lu</string>
+    <string name="tout_supprimer">Tout supprimer</string>
+    <string name="supprimer_tous_les_lus">Supprimer tous les lus</string>
+
+
+    <string name="article_lu_info">Cacher les articles lus</string>
+    <string name="article_lu_title">Article lu</string>
+
+    <string name="developped_by"><![CDATA[<p>Application developped by <a href="https://play.google.com/store/apps/dev?id=5203949265569429056">Squalala Team</a></p>]]></string>
+
+
+    <string name="about"><![CDATA[Retrouvez sur AndroiDZ toutes l’actualité autour de l’OS mobile de Google. Le site est une véritable mine d’or autour des produits Android et bien plus !<br/><br/>
+
+
+Depuis le lancement d’AndroiDZ, notre principal objectif est la vulgarisation des nouvelles technologies avec une spécialité prononcée pour Android et les terminaux tournant sous cet OS, pour nos visiteurs Algériens et nos visiteurs à travers le monde (visiteurs de plus de 30 pays).
+
+<br/><br/>
+Vous cherchez un téléphone ou souhaitez maîtriser parfaitement le vôtre ? Nos articles, dossiers et tutoriels sont là pour vous informer et vous guider. Votre smartphone n’aura plus aucun secret pour vous.
+<br/>
+Nous vous ferons découvrir les meilleures applications Android sur le Google Play.
+<br/>
+Si les tablettes vous intéressent, vous pourrez suivre l’actualité des différentes marques. Elles sont nombreuses et s’y retrouver est compliqué. AndroiDZ est là pour vous informer et vous guider dans l’univers Android.]]></string>
+
+</resources>

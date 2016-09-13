@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search_white_36dp"
+        android:title="@string/action_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_cacher_lus"
+        android:title="@string/cacher_lu"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_tout_marque_comme_lu"
+        android:title="@string/tout_marquer_lus"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_tout_supprimer"
+        android:title="@string/tout_supprimer"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_supprimer_tous_les_lu"
+        android:title="@string/supprimer_tous_les_lus"
+        app:showAsAction="never" />
+
+</menu>

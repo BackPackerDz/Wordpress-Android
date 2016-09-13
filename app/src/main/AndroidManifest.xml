@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.squalala.dz6android" >
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+
+    <!--
+   IMPORTANT: Change "info.androidhive.parsenotifications.permission.C2D_MESSAGE" in the lines below
+   to match your app's package name + ".permission.C2D_MESSAGE".
+ -->
+    <permission
+        android:name="com.squalala.dz6android.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.squalala.dz6android.permission.C2D_MESSAGE" />
+
+    <application
+        xmlns:tools="http://schemas.android.com/tools"
+        android:allowBackup="true"
+        android:hardwareAccelerated = "true"
+        tools:replace="android:icon,android:theme"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:name=".App"
+        android:theme="@style/AppTheme" >
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="6f377b8362270aff08ae0c11138e5ccf688249d1" />
+
+        <!-- Add the following meta-data for devices running Google Play service. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Optionally, register AnalyticsReceiver and AnalyticsService to support background
+     dispatching on non-Google Play devices -->
+        <receiver android:name="com.google.android.gms.analytics.AnalyticsReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.analytics.ANALYTICS_DISPATCH" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.AnalyticsService"
+            android:enabled="true"
+            android:exported="false"/>
+
+        <!-- Optionally, register CampaignTrackingReceiver and CampaignTrackingService to enable
+             installation campaign reporting -->
+        <receiver android:name="com.google.android.gms.analytics.CampaignTrackingReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.google.android.gms.analytics.CampaignTrackingService" />
+
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/MaterialBaseBaseTheme.Light.DarkToolbar"
+            android:label="@string/app_name" >
+
+        </activity>
+
+
+        <activity android:name=".ui.activity.SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:hardwareAccelerated="true"
+            android:theme="@style/MaterialBaseBaseTheme.Light.DarkToolbar"
+            android:label="@string/website_name"
+            android:name=".ui.activity.ShowPostActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+
+        <activity
+            android:theme="@style/MaterialBaseBaseTheme.Light.DarkToolbar"
+            android:name=".ui.activity.ViewPagerActivity"/>
+
+
+        <activity
+            android:theme="@style/MaterialBaseBaseTheme.Light.DarkToolbar"
+            android:name=".ui.activity.SettingActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.activity.MainActivity" />
+
+        </activity>
+
+
+        <service android:name=".service.NotificationService"
+                 android:label="@string/notification"/>
+
+        <receiver android:name=".receiver.BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="com.squalala.dz6android_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.parse.PushService" />
+        <receiver android:name=".receiver.CustomPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.parse.push.intent.RECEIVE" />
+                <action android:name="com.parse.push.intent.DELETE" />
+                <action android:name="com.parse.push.intent.OPEN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.parse.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <!--
+                  IMPORTANT: Change "com.parse.starter" to match your app's package name.
+                -->
+                <category android:name="com.squalala.dz6android" />
+            </intent-filter>
+        </receiver>
+
+
+        <receiver
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:name=".ui.widget.MyWidgetProvider" >
+            <intent-filter >
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+
+        <service
+            android:name=".service.WidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+
+    </application>
+
+</manifest>
